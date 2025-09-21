@@ -1,0 +1,12 @@
+node_modules/
+dist/
+client/dist/
+client/.vite/
+.env
+.env.*
+.venv/
+.serena/
+.DS_Store
+.idea/
+.vscode/
+coverage/
