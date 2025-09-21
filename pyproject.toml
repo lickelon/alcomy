@@ -1,0 +1,65 @@
+[project]
+name = "alcomy-server"
+version = "0.1.0"
+description = "FastAPI backend for the Alcomy monorepo"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.116.2",
+  "uvicorn[standard]==0.35.0",
+  "strawberry-graphql[fastapi]==0.282.0",
+  "sqlmodel==0.0.25",
+  "alembic==1.16.5",
+  "psycopg[binary]==3.2.10",
+  "pydantic-settings==2.10.1",
+  "python-dotenv==1.1.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.2",
+  "pytest-asyncio==1.2.0",
+  "pytest-cov==7.0.0",
+  "httpx==0.28.1",
+  "asgi-lifespan==2.1.0",
+  "ruff==0.13.1",
+  "ty==0.0.1a21",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["server/app"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["server/tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 80
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "B", "I"]
+ignore = ["B008"]
+fixable = ["E", "F", "UP", "B", "I"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["app"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+skip-magic-trailing-comma = false
+
+[tool.ty.environment]
+python-version = "3.12"
+root = ["./server"]
