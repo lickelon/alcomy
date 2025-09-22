@@ -1,6 +1,7 @@
 install:
 	pnpm install
 	uv sync
+	uv sync --extra dev
 
 run target="":
 	#!/usr/bin/env sh

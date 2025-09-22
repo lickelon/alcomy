@@ -8,6 +8,6 @@ client/.vite/
 .serena/
 .DS_Store
 .idea/
-.vscode/
+.ruff_cache/
 coverage/
 __pycache__/

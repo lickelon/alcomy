@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "lint": "biome lint",
     "format": "biome format --write",
+    "fix-unsafe": "biome check --fix --unsafe",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -90,8 +91,9 @@
       "biome lint --no-errors-on-unmatched"
     ],
     "server/**/*.py": [
-      "uv run --pythonpath server ruff check",
-      "uv run --pythonpath server ty check server"
+      "uv run ruff check --fix",
+      "uv run ruff format",
+      "uv run ty check server"
     ]
   }
 }

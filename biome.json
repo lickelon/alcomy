@@ -1,4 +1,9 @@
 {
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
   "assist": {
     "enabled": true,
     "actions": {
@@ -31,7 +36,7 @@
     }
   },
   "files": {
-    "includes": ["**/*"]
+    "includes": ["**/*", "!node_modules", "!.venv", "!dist"]
   },
   "formatter": {
     "enabled": true,
@@ -52,6 +57,9 @@
       "correctness": {
         "noUnusedImports": "error",
         "useImportExtensions": "warn"
+      },
+      "nursery": {
+        "useSortedClasses": "info"
       },
       "style": {
         "useImportType": {
