@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { LandingPage } from "@/features/landing-page";
+import { LandingPage } from "@/features/landing";
 import { UITestPage } from "@/features/ui-test";
 
 import { RootErrorBoundary } from "./routes/root-error.tsx";
