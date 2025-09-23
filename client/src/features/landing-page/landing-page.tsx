@@ -175,7 +175,28 @@ function getConnectionState(
   };
 }
 
-export default function LandingRoute() {
+function ConnectionCard({ state }: { state: ConnectionState }) {
+  return (
+    <article className="rounded-3xl border border-border/60 bg-background/85 p-6 shadow-sm backdrop-blur">
+      <div className="flex items-center justify-between gap-4">
+        <div className="space-y-1.5">
+          <p className="text-sm font-medium text-muted-foreground">
+            GraphQL 연결 상태
+          </p>
+          <p className={cn("text-lg font-semibold", state.tone)}>
+            {state.label}
+          </p>
+        </div>
+        <span className="rounded-full border border-border/60 bg-background px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          {state.badge}
+        </span>
+      </div>
+      <p className="mt-4 text-sm text-muted-foreground">{state.helper}</p>
+    </article>
+  );
+}
+
+const LandingPage = () => {
   const { data, loading, error } = useQuery<VersionQueryData>(VERSION_QUERY, {
     fetchPolicy: "cache-first",
   });
@@ -378,25 +399,6 @@ export default function LandingRoute() {
       </footer>
     </div>
   );
-}
+};
 
-function ConnectionCard({ state }: { state: ConnectionState }) {
-  return (
-    <article className="rounded-3xl border border-border/60 bg-background/85 p-6 shadow-sm backdrop-blur">
-      <div className="flex items-center justify-between gap-4">
-        <div className="space-y-1.5">
-          <p className="text-sm font-medium text-muted-foreground">
-            GraphQL 연결 상태
-          </p>
-          <p className={cn("text-lg font-semibold", state.tone)}>
-            {state.label}
-          </p>
-        </div>
-        <span className="rounded-full border border-border/60 bg-background px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-          {state.badge}
-        </span>
-      </div>
-      <p className="mt-4 text-sm text-muted-foreground">{state.helper}</p>
-    </article>
-  );
-}
+export default LandingPage;

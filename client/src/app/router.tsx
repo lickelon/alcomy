@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import LandingRoute from "@/features/landing/route";
+import { LandingPage } from "@/features/landing-page";
+import { UITestPage } from "@/features/ui-test";
 
 import { RootErrorBoundary } from "./routes/root-error.tsx";
 import RootLayout from "./routes/root-layout.tsx";
@@ -13,7 +14,11 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <LandingRoute />,
+        element: <LandingPage />,
+      },
+      {
+        path: "uitest",
+        element: <UITestPage />,
       },
     ],
   },
