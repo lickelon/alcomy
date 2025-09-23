@@ -134,8 +134,8 @@ function UITestForms() {
         <Separator />
         <div className="flex items-center justify-between rounded-lg border p-4">
           <div>
-            <p className="text-sm font-medium">알림 수신</p>
-            <p className="text-xs text-muted-foreground">
+            <p className="font-medium text-sm">알림 수신</p>
+            <p className="text-muted-foreground text-xs">
               스위치를 사용해 실시간 설정 값을 확인하세요.
             </p>
           </div>
@@ -151,8 +151,8 @@ function UITestForms() {
           </PopoverTrigger>
           <PopoverContent className="w-64" side="bottom" align="start">
             <div className="space-y-2">
-              <p className="text-sm font-medium">빠른 참고</p>
-              <p className="text-xs text-muted-foreground">
+              <p className="font-medium text-sm">빠른 참고</p>
+              <p className="text-muted-foreground text-xs">
                 팝오버는 안내 메시지나 보조 입력을 추가할 때 활용합니다.
               </p>
             </div>
@@ -198,18 +198,18 @@ function UITestData() {
             <TabsTrigger value="settings">설정</TabsTrigger>
           </TabsList>
           <TabsContent value="summary" className="mt-4 space-y-2">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               탭을 활용해 화면을 나누고 동일한 영역에서 컨텐츠를 전환할 수
               있습니다.
             </p>
           </TabsContent>
           <TabsContent value="history" className="mt-4 space-y-2">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               사용자 활동 로그, 변경 이력 등을 정리하는 데 유용합니다.
             </p>
           </TabsContent>
           <TabsContent value="settings" className="mt-4 space-y-2">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               설정 패널, 필터 등 다양한 시나리오에서 활용하세요.
             </p>
           </TabsContent>
@@ -229,7 +229,7 @@ function UITestData() {
           </AccordionItem>
         </Accordion>
         <div className="space-y-3">
-          <h3 className="text-sm font-semibold">연동 상태</h3>
+          <h3 className="font-semibold text-sm">연동 상태</h3>
           <Table>
             <TableHeader>
               <TableRow>

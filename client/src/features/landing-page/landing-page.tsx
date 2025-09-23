@@ -180,18 +180,18 @@ function ConnectionCard({ state }: { state: ConnectionState }) {
     <article className="rounded-3xl border border-border/60 bg-background/85 p-6 shadow-sm backdrop-blur">
       <div className="flex items-center justify-between gap-4">
         <div className="space-y-1.5">
-          <p className="text-sm font-medium text-muted-foreground">
+          <p className="font-medium text-muted-foreground text-sm">
             GraphQL 연결 상태
           </p>
-          <p className={cn("text-lg font-semibold", state.tone)}>
+          <p className={cn("font-semibold text-lg", state.tone)}>
             {state.label}
           </p>
         </div>
-        <span className="rounded-full border border-border/60 bg-background px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+        <span className="rounded-full border border-border/60 bg-background px-3 py-1 font-semibold text-muted-foreground text-xs uppercase tracking-wide">
           {state.badge}
         </span>
       </div>
-      <p className="mt-4 text-sm text-muted-foreground">{state.helper}</p>
+      <p className="mt-4 text-muted-foreground text-sm">{state.helper}</p>
     </article>
   );
 }
@@ -212,7 +212,7 @@ const LandingPage = () => {
     <div className="relative flex min-h-screen flex-col overflow-hidden bg-[radial-gradient(circle_at_top,_hsl(var(--primary)_/_0.15)_0%,_transparent_65%)] text-foreground">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_20%,_hsl(var(--primary)_/_0.12),_transparent_55%),_radial-gradient(circle_at_85%_10%,_hsl(var(--accent,_var(--primary))_/_0.08),_transparent_55%)]"
+        className="-z-10 pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,_hsl(var(--primary)_/_0.12),_transparent_55%),_radial-gradient(circle_at_85%_10%,_hsl(var(--accent,_var(--primary))_/_0.08),_transparent_55%)]"
       />
 
       <header className="relative z-10 px-6 py-12 sm:px-10">
@@ -223,15 +223,15 @@ const LandingPage = () => {
               aria-hidden
             />
             <div
-              className="absolute right-10 top-10 h-32 w-32 rounded-full bg-primary/15 blur-3xl"
+              className="absolute top-10 right-10 h-32 w-32 rounded-full bg-primary/15 blur-3xl"
               aria-hidden
             />
             <div className="relative z-10 flex flex-col gap-6">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-primary">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1 font-semibold text-[0.7rem] text-primary uppercase tracking-[0.35em]">
                 Alcomy Frontend Kit
               </span>
               <div className="space-y-5">
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-[3.35rem] md:leading-[1.05]">
+                <h1 className="font-bold text-4xl tracking-tight sm:text-5xl md:text-[3.35rem] md:leading-[1.05]">
                   모던 웹 제품을 위한 React · Tailwind · GraphQL 스타터
                 </h1>
                 <p className="max-w-3xl text-base text-muted-foreground sm:text-lg">
@@ -242,14 +242,14 @@ const LandingPage = () => {
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 <a
-                  className="inline-flex items-center gap-2 rounded-full border border-primary bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+                  className="inline-flex items-center gap-2 rounded-full border border-primary bg-primary px-4 py-2 font-semibold text-primary-foreground text-sm transition hover:bg-primary/90"
                   href="#"
                 >
                   스타터 살펴보기
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
                 <a
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-primary/80"
+                  className="inline-flex items-center gap-2 font-semibold text-primary text-sm transition hover:text-primary/80"
                   href="#"
                 >
                   배포 가이드 보기
@@ -265,21 +265,21 @@ const LandingPage = () => {
                 className="group relative overflow-hidden rounded-2xl border border-border/60 bg-background/80 p-5 shadow-sm transition hover:shadow-lg"
               >
                 <div
-                  className="absolute right-[-40px] top-[-40px] h-32 w-32 rounded-full bg-primary/5 blur-3xl"
+                  className="absolute top-[-40px] right-[-40px] h-32 w-32 rounded-full bg-primary/5 blur-3xl"
                   aria-hidden
                 />
                 <div className="flex items-start gap-3">
                   <span
                     className={cn(
-                      "flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold ring-1",
+                      "flex h-10 w-10 items-center justify-center rounded-full font-semibold text-sm ring-1",
                       accentStyles[item.accent],
                     )}
                   >
                     <item.icon className="h-5 w-5" aria-hidden />
                   </span>
                   <div>
-                    <h2 className="text-base font-semibold">{item.title}</h2>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <h2 className="font-semibold text-base">{item.title}</h2>
+                    <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -301,10 +301,10 @@ const LandingPage = () => {
                   <Sparkles className="h-4 w-4" aria-hidden />
                 </span>
                 <div>
-                  <h2 className="text-base font-semibold">
+                  <h2 className="font-semibold text-base">
                     Quickstart 타임라인
                   </h2>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-muted-foreground text-sm">
                     아래 순서를 따라가면 전체 스택을 빠르게 자신의 프로젝트로
                     만들 수 있습니다.
                   </p>
@@ -317,14 +317,14 @@ const LandingPage = () => {
                     key={step.title}
                     className="relative flex gap-4 rounded-2xl border border-border/60 bg-background/70 p-4"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 font-semibold text-primary text-sm">
                       {index + 1}
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">
+                      <p className="font-semibold text-foreground text-sm">
                         {step.title}
                       </p>
-                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                      <p className="mt-1 text-muted-foreground text-xs leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -342,14 +342,14 @@ const LandingPage = () => {
                 key={section.title}
                 className="rounded-3xl border border-border/60 bg-background/85 p-6 shadow-sm backdrop-blur"
               >
-                <span className="inline-flex items-center rounded-full border border-border/60 bg-background px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-muted-foreground">
+                <span className="inline-flex items-center rounded-full border border-border/60 bg-background px-3 py-1 font-semibold text-[0.65rem] text-muted-foreground uppercase tracking-[0.32em]">
                   {section.badge}
                 </span>
-                <h3 className="mt-4 text-lg font-semibold">{section.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="mt-4 font-semibold text-lg">{section.title}</h3>
+                <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
                   {section.description}
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <ul className="mt-4 space-y-2 text-muted-foreground text-sm">
                   {section.bullets.map((point) => (
                     <li key={point} className="flex items-start gap-2">
                       <span className="mt-[0.45rem] h-1.5 w-1.5 rounded-full bg-primary" />
@@ -361,8 +361,8 @@ const LandingPage = () => {
             ))}
 
             <article className="rounded-3xl border border-border/60 bg-background/85 p-6 shadow-sm backdrop-blur">
-              <h3 className="text-lg font-semibold">문서 & 리소스</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
+              <h3 className="font-semibold text-lg">문서 & 리소스</h3>
+              <p className="mt-2 text-muted-foreground text-sm">
                 스택 이해를 돕는 레퍼런스와 가이드를 모았습니다.
               </p>
               <ul className="mt-5 space-y-3">
@@ -378,10 +378,10 @@ const LandingPage = () => {
                         <resource.icon className="h-4 w-4" aria-hidden />
                       </span>
                       <span>
-                        <span className="block text-sm font-semibold text-foreground group-hover:text-primary">
+                        <span className="block font-semibold text-foreground text-sm group-hover:text-primary">
                           {resource.title}
                         </span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className="text-muted-foreground text-xs">
                           {resource.description}
                         </span>
                       </span>
@@ -394,7 +394,7 @@ const LandingPage = () => {
         </div>
       </main>
 
-      <footer className="relative z-10 border-t border-border/60 bg-background/85 py-6 text-center text-xs text-muted-foreground">
+      <footer className="relative z-10 border-border/60 border-t bg-background/85 py-6 text-center text-muted-foreground text-xs">
         React 19 · Tailwind CSS 4 · Apollo Client 4 · React Router 7 · FastAPI
       </footer>
     </div>

@@ -7,8 +7,8 @@ export function RootErrorBoundary() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
         <div className="space-y-4 text-center">
-          <h1 className="text-3xl font-semibold">{error.status}</h1>
-          <p className="text-sm text-muted-foreground">{error.statusText}</p>
+          <h1 className="font-semibold text-3xl">{error.status}</h1>
+          <p className="text-muted-foreground text-sm">{error.statusText}</p>
         </div>
       </div>
     );
@@ -20,8 +20,8 @@ export function RootErrorBoundary() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
       <div className="space-y-4 text-center">
-        <h1 className="text-3xl font-semibold">오류</h1>
-        <p className="text-sm text-muted-foreground">{fallbackMessage}</p>
+        <h1 className="font-semibold text-3xl">오류</h1>
+        <p className="text-muted-foreground text-sm">{fallbackMessage}</p>
       </div>
     </div>
   );

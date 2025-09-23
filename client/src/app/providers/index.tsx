@@ -21,7 +21,7 @@ function GlobalFallback() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
       <div className="space-y-2 text-center">
-        <div className="text-sm font-medium text-muted-foreground">
+        <div className="font-medium text-muted-foreground text-sm">
           Loading workspace…
         </div>
         <div className="h-1 w-32 overflow-hidden rounded-full bg-muted">
