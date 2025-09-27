@@ -38,6 +38,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
+import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import {
   Table,
@@ -144,6 +145,17 @@ function UITestForms() {
             onCheckedChange={setNotifications}
             aria-label="알림 수신 토글"
           />
+        </div>
+        <div className="flex flex-col rounded-lg border p-4">
+          <div className="flex items-baseline justify-normal gap-2">
+            <p className="font-medium text-sm">평점</p>
+            <p className="text-muted-foreground text-xs">
+              슬라이더를 사용해 평점을 입력해보세요.
+            </p>
+          </div>
+          <div className="my-2">
+            <Slider onChange={() => {}} min={0} max={10} step={2}></Slider>
+          </div>
         </div>
         <Popover>
           <PopoverTrigger asChild>
