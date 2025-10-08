@@ -18,5 +18,8 @@
     }
   },
   "css.format.enable": false,
-  "css.validate": false
+  "css.validate": false,
+  "python-envs.pythonProjects": [],
+  "python.analysis.indexing": true,
+  "python.analysis.autoImportCompletions": true
 }
