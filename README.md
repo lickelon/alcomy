@@ -72,16 +72,16 @@ just docker down    # docker compose down
   pnpm typecheck   # tsc --noEmit
   pnpm build       # tsc --noEmit && vite build
   ```
-- UI 컴포넌트는 `client/src/components/ui` 이하에 shadcn CLI로 동기화되어 있습니다. Tailwind 토큰은 `client/src/styles.css`의 `@theme` 섹션에서 관리하며, 필요 시 shadcn CLI(`pnpm dlx shadcn@latest ...`)로 컴포넌트를 추가할 수 있습니다.
+- UI 컴포넌트는 `client/src/components/ui` 이하에 shadcn CLI로 동기화되어 있습니다. Tailwind 토큰은 `client/src/styles.css`의 `@theme` 섹션에서 관리하며, 필요 시 shadcn CLI(`pnpm dlx shadcn@latest add ...`)로 컴포넌트를 추가할 수 있습니다.
 - 공용 Provider 스택은 `client/src/app/providers`, 라우터 정의는 `client/src/app/router.tsx`, 기능별 화면은 `client/src/features`에 위치합니다.
 
 ## 데이터베이스 & 마이그레이션
 ```sh
 # 새 마이그레이션 생성
-uv run --pythonpath server alembic revision --autogenerate -m "init"
+uv run alembic revision --autogenerate -m "init"
 
 # 최신 스키마 적용
-uv run --pythonpath server alembic upgrade head
+uv run alembic upgrade head
 ```
 
 ## 유틸 링크
@@ -90,4 +90,3 @@ uv run --pythonpath server alembic upgrade head
 - [Apollo Client React 가이드](https://www.apollographql.com/docs/react)
 - [Strawberry GraphQL](https://strawberry.rocks/docs)
 
-필요한 추가 정보나 수정이 있으면 README에 계속 반영해주세요.
